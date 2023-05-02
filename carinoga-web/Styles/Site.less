@@ -1,9 +1,15 @@
-﻿@main-font: "Helvetica Neue", Arial, Helvetica, "Nimbus Sans L", sans-serif;
-@main-bacground-color: #aaa;
+﻿@import url('https://fonts.googleapis.com/css2?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css2?family=Comme:wght@100;300&family=Open+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comme:wght@100;300&family=Open+Sans:wght@500&family=Roboto+Flex:wght@300;400;500&display=swap');
+
+@main-font: "Comme", sans-serif;
+@header-font: "Roboto Flex", sans-serif;
+@main-bacground-color: #f6f6f6;
 
 html, body, header {
     background: transparent;
     border: 0;
+    font-family: @main-font;
     margin: 0;
     padding: 0;
     vertical-align: baseline;
@@ -36,12 +42,16 @@ a img {
 }
 
 header {
-    font: @main-font;
+    font-family: @header-font;
     background-color: @main-bacground-color;
     height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     h1 {
         text-align: center;
-        padding: 30px 0 0 0;
+        font-weight: 800;
+        padding: 15px 0 0 0;
     }
 }
