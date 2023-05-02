@@ -9,18 +9,25 @@
 <body>
     <header>
         <h1><a asp-page="/Index">Cari Noga, author</a></h1>
+        <nav>
+            <ul>
+                <li><a href="#">Bio</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Autism Reads</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Book Clubs</a></li>
+            </ul>
+        </nav>
     </header>
-    <div>
-        <main>
-            @RenderBody()
-        </main>
-    </div>
+    <main>
+        @RenderBody()
+    </main>
 
     <footer>
-        <div>
-            &copy; 2023 - carinoga.web - <a asp-page="/Privacy">Privacy</a>
-        </div>
+        &copy; 2023 - carinoga.web - <a asp-page="/Privacy">Privacy</a>
     </footer>
+
     <script src="https://kit.fontawesome.com/70236ac939.js" crossorigin="anonymous"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
 

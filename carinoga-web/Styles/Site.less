@@ -5,6 +5,8 @@
 @main-font: "Comme", sans-serif;
 @header-font: "Roboto Flex", sans-serif;
 @main-bacground-color: #f6f6f6;
+@footer-background: #252525;
+@link-hover: #26bdef;
 
 html, body, header {
     background: transparent;
@@ -13,10 +15,19 @@ html, body, header {
     margin: 0;
     padding: 0;
     vertical-align: baseline;
+    height: 100%;
+    box-sizing: border-box;
 }
 
 body {
     line-height: 1;
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+* {
+    box-sizing: inherit;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -28,9 +39,6 @@ ol, ul {
     list-style: none;
 }
 
-del {
-    text-decoration: line-through;
-}
 
 table {
     border-collapse: collapse;
@@ -41,6 +49,32 @@ a img {
     border: none;
 }
 
+a {
+    flex: 1;
+    text-decoration: none;
+    outline: none;
+    text-align: center;
+    line-height: 3;
+    color: @header-font;
+}
+
+a:link,
+a:visited,
+a:focus {
+    background: transparent;
+    color: @header-font;
+}
+
+a:hover {
+    background: @link-hover;
+}
+
+a:active {
+    background: @link-hover;
+    color: white;
+}
+
+
 header {
     font-family: @header-font;
     background-color: @main-bacground-color;
@@ -50,8 +84,34 @@ header {
     justify-content: center;
 
     h1 {
+        display: flex;
         text-align: center;
         font-weight: 800;
+        margin-left: 64px;
         padding: 15px 0 0 0;
     }
+
+    nav {
+        margin-left: auto;
+
+        ul {
+            display: flex;
+            margin-right: 32px;
+
+            li {
+                text-transform: uppercase;
+                margin: 16px;
+            }
+        }
+    }
+}
+
+footer {
+    font-family: @header-font;
+    color: #fff;
+    background-color: @footer-background;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
