@@ -1,0 +1,1 @@
+﻿alert("I agree to be awesome today");

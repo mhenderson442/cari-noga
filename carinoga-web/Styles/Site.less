@@ -84,18 +84,6 @@ a:active {
     color: white;
 }
 
-section, article {
-    
-    padding: 1.0em;
-    max-width: 1024px;
-    
-    span {
-        font-size: 3em;
-        color: @icon;
-    }
-}
-
-
 header {
     font-family: @header-font;
     background-color: @main-bacground-color;
@@ -124,6 +112,37 @@ header {
                 margin: 16px;
             }
         }
+    }
+}
+
+section, article {
+    padding: 1.0em;
+    max-width: 1024px;
+
+    span {
+        font-size: 3em;
+        color: @icon;
+    }
+
+    nav {
+        float: left;
+        border: 2px dashed red;
+
+
+        ul {
+            margin-right: 32px;
+
+            li {
+                text-transform: uppercase;
+                margin: 16px;
+            }
+        }
+    }
+
+    article {
+        display: flex;
+        border: 2px dashed red;
+        width: 50%;
     }
 }
 
