@@ -29,4 +29,10 @@
     <Folder Include="wwwroot\downloads\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Update="Data\book-clubs.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>

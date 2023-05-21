@@ -2,6 +2,24 @@
 @model CariNoga.Web.Pages.BookClubsModel
 <section>
 
-    <h3>Book Clubs</h3>
+    <h2>Book Clubs</h2>
+    <article class="gallery">
+        <header>Photo Gallery</header>
+        <section id="image-gallery" data-galleryitem="@Model.BookClubGalleryItems">
 
+        </section>
+        <footer id="gallery-pagination">
+            <button id="btn-previous">
+                <span class="fa-solid fa-arrow-left"></span>
+                Previous
+                </button>
+            <div>
+                <div id="gallery-dots"></div>
+                <span id="page"></span>
+            </div>
+            <button id="btn-next">
+                Next
+                <span class="fa-solid fa-arrow-right"></span></button>
+        </footer>
+    </article>
 </section>
