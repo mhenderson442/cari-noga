@@ -1,5 +1,11 @@
 ﻿let books = document.getElementsByClassName("books");
 
+document.onreadystatechange = () => {
+    if (document.readyState === "complete") {
+        showSelectedArticle("orphan-daughter");
+    }
+}
+
 Array.from(books).forEach(bookNavigationClickEvent);
 
 function bookNavigationClickEvent(element) {

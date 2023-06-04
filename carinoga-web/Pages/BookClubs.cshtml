@@ -1,12 +1,19 @@
 ﻿@page
 @model CariNoga.Web.Pages.BookClubsModel
+@{
+    ViewData["Title"] = "Book Clubs";
+}
 <section>
 
     <h2>Book Clubs</h2>
+    <article>
+        <p>Is your book club reading Sparrow Migrations or The Orphan Daughter? Drop me a note at cari@carinoga.com. I’d be happy to join your discussion in person or via Skype. Or send a picture, and I’ll feature here.</p>
+    </article>
+    
     <article class="gallery">
-        <header>Photo Gallery</header>
+        <header>Photo Gallery (Coming Soon)</header>
         <section id="image-gallery" data-galleryitem="@Model.BookClubGalleryItems">
-
+            
         </section>
         <footer id="gallery-pagination">
             <button id="btn-previous">
