@@ -11,12 +11,12 @@
     </article>
     
     <article class="gallery">
-        <header>Photo Gallery (Coming Soon)</header>
-        <section id="image-gallery" data-galleryitem="@Model.BookClubGalleryItems">
-            
+        <header>Photo Gallery</header>
+        <section id="image-gallery" data-galleryitems="@Model.BookClubGalleryItems">
+            <img id="current-bookclub" data-index="0" data-file="book-club-3.jpg" src="~/images/book-club-3.jpg" />
         </section>
         <footer id="gallery-pagination">
-            <button id="btn-previous">
+            <button id="btn-previous" disabled>
                 <span class="fa-solid fa-arrow-left"></span>
                 Previous
                 </button>
@@ -26,7 +26,12 @@
             </div>
             <button id="btn-next">
                 Next
-                <span class="fa-solid fa-arrow-right"></span></button>
+                <span class="fa-solid fa-arrow-right"></span>
+            </button>
         </footer>
     </article>
 </section>
+
+@section Scripts{
+    <script type="text/javascript" src="~/js/book-clubs.js" asp-append-version="true"></script>
+}

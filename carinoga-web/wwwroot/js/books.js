@@ -17,6 +17,7 @@ function bookNavigationClickEvent(element) {
         }
     );
 }
+
 function hideAllBooksArticles() {
     Array.from(books).forEach((book) => {
         document.getElementById(`${book.id}-article`).hidden = true;

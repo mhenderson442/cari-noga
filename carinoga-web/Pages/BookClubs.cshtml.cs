@@ -7,14 +7,12 @@ namespace CariNoga.Web.Pages;
 
 public class BookClubsModel : PageModel
 {
-    public IList<BookClubGalleryItem> BookClubGalleryItems { get; set; } = default!;
+    public string BookClubGalleryItems { get; set; } = default!;
 
     public IActionResult OnGet()
     {
         var json = System.IO.File.ReadAllText("Data/book-clubs.json");
-        var images = JsonSerializer.Deserialize<BookClubGalleryItems>(json);
-
-        BookClubGalleryItems = images?.Items!;
+        BookClubGalleryItems = json;
 
         return Page();
     }
