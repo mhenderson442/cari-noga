@@ -6,3 +6,4 @@ dotnet publish `
     /t:PublishContainer `
     -c Release
 
+    Set-Location ..\
